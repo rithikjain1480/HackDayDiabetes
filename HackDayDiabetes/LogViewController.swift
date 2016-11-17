@@ -16,8 +16,12 @@ class LogViewController: UIViewController {
     @IBOutlet weak var sugarContent: UITextField!
     @IBOutlet weak var mealName: UITextField!
     @IBAction func finishInput(_ sender: AnyObject) {
-        
+        let log = Log(name: mealName.text!, carbs: Double(carbContent.text!)!, sugar: Double(sugarContent.text!)!)
+    
+        LogManager.sharedInstance.logs?.append(log)
+        LogManager.sharedInstance.save()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

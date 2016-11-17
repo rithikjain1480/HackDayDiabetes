@@ -41,6 +41,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="di2-vT-Vuf">
+            <objects>
+                <viewController id="N1x-Mu-w3r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2SY-jD-C3j"/>
+                        <viewControllerLayoutGuide type="bottom" id="00m-Ns-6bb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xqr-vt-oa9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xis-YA-ySl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="00m-Ns-6bb" firstAttribute="top" secondItem="xis-YA-ySl" secondAttribute="bottom" id="OXT-sv-XaT"/>
+                            <constraint firstItem="xis-YA-ySl" firstAttribute="top" secondItem="Xqr-vt-oa9" secondAttribute="top" id="Rcl-vm-5d1"/>
+                            <constraint firstAttribute="trailing" secondItem="xis-YA-ySl" secondAttribute="trailing" id="k70-SS-dUp"/>
+                            <constraint firstItem="xis-YA-ySl" firstAttribute="leading" secondItem="Xqr-vt-oa9" secondAttribute="leading" id="omU-Fu-PqA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewz-QX-rat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="-298.2008995502249"/>
+        </scene>
         <!--Log View Controller-->
         <scene sceneID="HHJ-NL-6y9">
             <objects>
@@ -87,6 +116,7 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="finishInput:" destination="X39-8m-0v4" eventType="touchUpInside" id="poG-Qs-cJP"/>
+                                    <segue destination="N1x-Mu-w3r" kind="show" id="aFR-yA-4y3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84H-fF-bHC">
